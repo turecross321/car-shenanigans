@@ -2,13 +2,16 @@ import obd
 import time
 import vlc
 
+OBD_PORT = "COM12"
+OBD_BAUDRATE = 9600
+
 DEACCELERATION_THRESHOLD = 10
 MINIMUM_SPEED = 40
 POLLING_DELAY = 1
 MIN_RPM = 2250
 
 print("Starting connection")
-connection = obd.OBD(portstr="COM12", baudrate=9600)
+connection = obd.OBD(portstr=OBD_PORT, baudrate=OBD_BAUDRATE)
 
 if connection.is_connected():
     print("Connected to OBD adapter")
