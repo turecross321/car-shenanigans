@@ -28,14 +28,14 @@ else:
     exit()
 
 presence = Presence(DISCORD_CLIENT_ID)
-print("Connected")
+print("Connected to Discord")
 
 while True:
     rpm = connection.query(obd.commands.RPM).value.magnitude
     speed = connection.query(obd.commands.SPEED).value.magnitude
     run_time = connection.query(obd.commands.RUN_TIME).value.magnitude
-    fuel_level = connection.query(obd.commands_FUEL_LEVEL).value.magnitude
-    temperature = connection.query(obd.commands_AMBIANT_AIR_TEMP).value.magnitude
+    fuel_level = connection.query(obd.commands.FUEL_LEVEL).value.magnitude
+    temperature = connection.query(obd.commands.AMBIANT_AIR_TEMP).value.magnitude
 
     start = time.time() - run_time
 
