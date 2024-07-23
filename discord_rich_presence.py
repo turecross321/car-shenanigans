@@ -43,7 +43,7 @@ while True:
         {
             "state": "Driving",
             "details": f"{speed} km/h | {rpm} RPM | {fuel_level} fuel | {temperature}° C",
-            "timestamps": {"stdiart": start},
+            "timestamps": {"start": start},
             "assets": {
                 "large_image": current_model_key, 
                 "large_text": current_model_name
